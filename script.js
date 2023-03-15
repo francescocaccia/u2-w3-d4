@@ -31,7 +31,8 @@ fetch("https://striveschool-api.herokuapp.com/books")
     bottoni.forEach(bottone => {
       bottone.addEventListener("click", event => {
         event.preventDefault();
-        document.querySelector(".col").className = "d-none";
+        const col = document.querySelector(".col");
+        event.target.closest(".col").className = "d-none";
       });
     });
   })
